@@ -39,5 +39,31 @@ const conceptExplainPrompt = (question) => `
 
     Important: Do NOT add any extra text outside the JSON format. Only return a valid JSON.
     `;
+const quizPrompt = (topic, numberOfQuestions) => `
+    You are an AI trained to generate multiple-choice quizzes.
 
-module.exports = { questionAnswerPrompt, conceptExplainPrompt };
+    Task:
+    - Topic: ${topic}
+    - Generate ${numberOfQuestions} quiz questions.
+    - Each question must have exactly 4 options (A, B, C, D).
+    - Clearly mark the correct answer.
+    - Keep questions beginner-friendly and concise.
+    - Return the result strictly as a JSON array in the following format:
+
+    [
+        {
+            "question": "What is ...?",
+            "options": ["Option A", "Option B", "Option C", "Option D"],
+            "answer": "Option A"
+        },
+        ...
+    ]
+
+    Important:
+    - Do NOT add any extra text or explanation.
+    - Only return valid JSON.
+`;
+
+
+
+module.exports = { questionAnswerPrompt, conceptExplainPrompt ,quizPrompt};
