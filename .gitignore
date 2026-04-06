@@ -1,6 +1,7 @@
 # Node.js dependencies
 node_modules/
 
+
 # Logs
 logs
 *.log
@@ -26,3 +27,4 @@ dist/
 build/
 tmp/
 temp/
+
