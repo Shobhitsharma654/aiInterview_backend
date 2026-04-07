@@ -16,7 +16,7 @@ const app = express();
 // Middleware to handle CORS
 app.use(
     cors({
-        origin: ["http://localhost:5173", "https://ai-interviewfrontend.vercel.app"],
+        origin: ["http://localhost:5173", "https://ai-interviewfrontend-glzt.vercel.app"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
     })
